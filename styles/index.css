@@ -1,0 +1,13 @@
+body {
+    --grid-size: 48px;
+    --dot-size: 1px;
+    --paper-size: 256px;
+
+    background-image:
+        var(--paper-texture),
+        radial-gradient(circle, oklch(0.5 0 0) var(--dot-size), transparent var(--dot-size));
+
+    background-size:
+        var(--paper-size) var(--paper-size),
+        var(--grid-size) var(--grid-size);
+}
