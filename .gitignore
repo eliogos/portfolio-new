@@ -1,1 +1,17 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Zed
+.zed/
+
+# Build/development
+dist/
+build/

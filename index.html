@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,27 +14,49 @@
         <meta property="og:title" content="Meet Ouk!">
         <meta property="og:description" content="Ouk's portfolio — animation, multimedia art, design, and code.">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://eliogos.neocities.org/">
+        <meta property="og:url" content="https://oukunaut.neocities.org/">
         <meta property="og:image" content="https://placehold.co/400x400.png?text=Ouk"> <!-- placeholder image -->
 
         <!-- For Twitter -->
         <meta name="twitter:card" content="summary_large_image">
 
         <!-- Theme -->
-        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-        <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+        <meta name="theme-color"
+              content="#f5f1e8"
+              media="(prefers-color-scheme: light)">
+
+        <meta name="theme-color"
+              content="#292827"
+              media="(prefers-color-scheme: dark)">
 
         <meta name="color-scheme" content="light dark">
 
         <!-- Styles -->
         <link rel="stylesheet" href="styles/index.css"/>
-    </head>
-<body>
-    <header>
 
-    </header>
-    <main></main>
-    <footer></footer>
+        <!-- Scripts -->
+        <script type="module" src="scripts/index.js"></script>
+    </head>
+
+<body>
+    <div class="paper">
+        <header>
+            Hello World
+
+            <button
+                type="button"
+                commandfor="theme-controller"
+                command="--switch-theme"
+            >
+                Theme: Light
+            </button>
+
+            <div id="theme-controller"></div>
+        </header>
+
+        <main></main>
+        <footer></footer>
+    </div>
 </body>
-<script src="scripts/index.js"></script>
+
 </html>

@@ -1,15 +1,84 @@
+:root {
+    color-scheme: light dark;
+
+    --paper-color: light-dark(
+        oklch(0.96 0.03 85),
+        oklch(0.30 0.01 100)
+    );
+
+    --grid-color: light-dark(
+        oklch(0.2 0 0 / 0.3),
+        oklch(0.9 0 0 / 0.2)
+    );
+
+    --vignette-color: light-dark(
+        oklch(0.35 0.07 359.19 / 0.35),
+        oklch(0 0 0 / 0.5)
+    );
+
+    --outside-color: light-dark(
+        oklch(0.65 0 0),
+        oklch(0.23 0 0)
+    );
+}
+
+html,
 body {
-    --grid-size: 48px;
-    --dot-size: 1px;
-    --paper-size: 256px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    background: var(--outside-color);
+}
+
+
+.paper {
+    position: absolute;
+    inset: 24px;
+
+    box-sizing: border-box;
+    overflow: auto;
+
+    border-radius: 16px;
+
+    background-color: var(--paper-color);
 
     background-image:
         var(--paper-texture),
-        radial-gradient(circle, oklch(0.5 0 0) var(--dot-size), transparent var(--dot-size)),
-        radial-gradient(circle, transparent, red);
+        radial-gradient(
+            circle,
+            var(--grid-color) var(--dot-size),
+            transparent var(--dot-size)
+        );
 
     background-size:
         var(--paper-size) var(--paper-size),
-        var(--grid-size) var(--grid-size),
-        cover;
+        var(--grid-size) var(--grid-size);
+}
+
+/* Vignette */
+.paper::after {
+    content: "";
+    position: fixed;
+    inset: 24px;
+
+    pointer-events: none;
+
+    border-radius: 16px;
+
+    box-shadow:
+        inset 0 0 8vw 1vw var(--vignette-color),
+        inset 0 3px 3px 1px oklch(1 0 0 / 0.1);
+
+    z-index: 2;
+}
+
+.paper > header,
+.paper > main,
+.paper > footer {
+    position: relative;
+    z-index: 3;
 }

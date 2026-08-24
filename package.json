@@ -1,0 +1,23 @@
+{
+  "name": "ouk-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My portfolio website for Neocities.",
+  "scripts": {
+    "deploy": "node --env-file=.env deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliogos/portfolio-new.git"
+  },
+  "keywords": [
+    "portfolio",
+    "neocities",
+    "artist",
+    "animator",
+    "designer"
+  ],
+  "author": "Ouk",
+  "license": "ISC",
+  "type": "module"
+}
