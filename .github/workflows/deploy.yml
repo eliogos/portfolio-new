@@ -1,0 +1,32 @@
+name: Deploy to Neocities
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Neocities
+        env:
+          NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_KEY }}
+        run: |
+          for file in $(git ls-files); do
+            case "$file" in
+              .github/*|.gitignore|.zed/*|deploy.js|package.json|package-lock.json)
+                continue
+                ;;
+            esac
+
+            curl --fail-with-body \
+              -X POST \
+              -H "Authorization: Bearer $NEOCITIES_API_KEY" \
+              -F "$file=@$file" \
+              "https://neocities.org/api/upload"
+          done
