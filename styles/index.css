@@ -34,7 +34,7 @@ body {
     background: var(--surface-bg);
 }
 
-
+/* Paper */
 .paper {
     position: absolute;
     inset: 0;
@@ -68,12 +68,115 @@ body {
     box-shadow:
         inset 0 0 8vw 1vw var(--vignette-color);
 
-    z-index: 2;
+    z-index: 10;
 }
 
+/* Smaller vignette on mobile */
+@supports (
+    box-shadow:
+        inset 0 0
+        if(media(width < 600px): 4vw; else: 8vw)
+        if(media(width < 600px): 0.5vw; else: 1vw)
+        black
+) {
+    .paper::after {
+        box-shadow:
+            inset
+            0
+            0
+            if(media(width < 600px): 4vw; else: 8vw)
+            if(media(width < 600px): 0.5vw; else: 1vw)
+            var(--vignette-color);
+    }
+}
+
+/* Content */
 .paper > header,
 .paper > main,
 .paper > footer {
     position: relative;
     z-index: 3;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Main */
+main {
+    width: min(1100px, 100%);
+    margin-inline: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.section {
+    padding-block: 5rem;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.placeholder {
+    display: grid;
+    place-items: center;
+    min-height: 160px;
+    border: 1px dashed currentColor;
+    opacity: 0.5;
+}
+
+/* Footer */
+.site-footer {
+    padding: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .site-nav {
+        flex-wrap: wrap;
+    }
+
+    .project-grid,
+    .placeholder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .section {
+        padding-block: 3rem;
+    }
+}
+
+.todo-list li:has(input:checked) {
+    text-decoration: line-through;
+    opacity: 0.5;
 }

@@ -1,62 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
 
-        <title>Meet Ouk!</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-        <meta name="description" content="Ouk's portfolio — animation, multimedia art, design, and code.">
+    <title>Meet Ouk!</title>
 
-        <meta name="author" content="Ouk">
+    <meta
+        name="description"
+        content="Ouk's portfolio — animation, multimedia art, design, and code."
+    >
 
-        <!-- For Discord -->
-        <meta property="og:title" content="Meet Ouk!">
-        <meta property="og:description" content="Ouk's portfolio — animation, multimedia art, design, and code.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://oukunaut.neocities.org/">
-        <meta property="og:image" content="https://placehold.co/400x400.png?text=Ouk"> <!-- placeholder image -->
+    <meta name="author" content="Ouk">
 
-        <!-- For Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
+    <!-- Open Graph / Discord -->
+    <meta property="og:title" content="Meet Ouk!">
+    <meta
+        property="og:description"
+        content="Ouk's portfolio — animation, multimedia art, design, and code."
+    >
+    <meta property="og:type" content="website">
+    <meta
+        property="og:url"
+        content="https://oukunaut.neocities.org/"
+    >
+    <meta
+        property="og:image"
+        content="https://placehold.co/400x400.png?text=Ouk"
+    >
 
-        <!-- Theme -->
-        <meta name="theme-color"
-              content="#f5f1e8"
-              media="(prefers-color-scheme: light)">
+    <!-- Social -->
+    <meta name="twitter:card" content="summary_large_image">
 
-        <meta name="theme-color"
-              content="#292827"
-              media="(prefers-color-scheme: dark)">
+    <!-- Theme -->
+    <meta
+        name="theme-color"
+        content="#f5f1e8"
+        media="(prefers-color-scheme: light)"
+    >
 
-        <meta name="color-scheme" content="light dark">
+    <meta
+        name="theme-color"
+        content="#292827"
+        media="(prefers-color-scheme: dark)"
+    >
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="styles/index.css"/>
+    <meta name="color-scheme" content="light dark">
 
-        <!-- Scripts -->
-        <script type="module" src="scripts/index.js"></script>
-    </head>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- Scripts -->
+    <script
+        type="module"
+        src="scripts/index.js"
+    ></script>
+</head>
 
 <body>
     <div class="paper">
-        <header>
-            Hello World
 
-            <button
-                type="button"
-                commandfor="theme-controller"
-                command="--switch-theme"
-            >
-                Theme: Light
-            </button>
+        <!-- Navigation -->
+        <header class="site-header">
+            <a href="/" class="site-logo">
+                Ouk
+            </a>
 
-            <div id="theme-controller"></div>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+
+                <button
+                    type="button"
+                    commandfor="theme-controller"
+                    command="--switch-theme"
+                    aria-label="Switch color theme"
+                >
+                    Theme: Light
+                </button>
+
+                <div id="theme-controller"></div>
+            </nav>
         </header>
 
-        <main></main>
-        <footer></footer>
+
+        <main>
+
+            <!-- Hero -->
+            <section
+                id="hero"
+                class="hero"
+                aria-labelledby="hero-title"
+            >
+                <p class="placeholder-label">
+                    [ Hero / Introduction ]
+                </p>
+
+                <h1 id="hero-title">
+                    Meet Ouk!
+                </h1>
+
+                <p>
+                    Animation, multimedia art, design, and code.
+                </p>
+
+                <div class="placeholder">
+                    Hero artwork / animation
+                </div>
+            </section>
+
+
+            <!-- About -->
+            <section
+                id="about"
+                class="section"
+                aria-labelledby="about-title"
+            >
+                <p class="placeholder-label">
+                    [ About ]
+                </p>
+
+                <h2 id="about-title">
+                    About
+                </h2>
+
+                <div class="placeholder">
+                    About section content
+                </div>
+            </section>
+						
+						<!-- Todo -->
+						<section
+								id="todo"
+								class="section"
+								aria-labelledby="about-todo"
+						>
+							<ul class="todo-list">
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            About / introduction
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Thesis film
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Animation projects
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            3D / Blender work
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Illustrations
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Graphic design
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Multimedia projects
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Motion graphics
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Code / web projects
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" checked disabled>
+            GitHub
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Discord
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Instagram
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            YouTube
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Contact information
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Resume / CV
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Favicon
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" checked disabled>
+            Discord / Open Graph preview
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Mobile navigation
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Accessibility
+        </label>
+    </li>
+
+    <li>
+        <label>
+            <input type="checkbox" disabled>
+            Responsive layout
+        </label>
+    </li>
+</ul>
+						</section>
+
+            <!-- Skills -->
+            <section
+                id="skills"
+                class="section"
+                aria-labelledby="skills-title"
+            >
+                <p class="placeholder-label">
+                    [ Skills / Tools ]
+                </p>
+
+                <h2 id="skills-title">
+                    Skills &amp; Tools
+                </h2>
+
+                <div class="placeholder-grid">
+                    <div class="placeholder">Animation</div>
+                    <div class="placeholder">3D</div>
+                    <div class="placeholder">Design</div>
+                    <div class="placeholder">Code</div>
+                </div>
+            </section>
+
+
+            <!-- Work -->
+            <section
+                id="work"
+                class="section"
+                aria-labelledby="work-title"
+            >
+                <p class="placeholder-label">
+                    [ Portfolio ]
+                </p>
+
+                <h2 id="work-title">
+                    Selected Works
+                </h2>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="placeholder">
+                            Project image
+                        </div>
+
+                        <h3>
+                            Project One
+                        </h3>
+
+                        <p>
+                            Project description placeholder.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="placeholder">
+                            Project image
+                        </div>
+
+                        <h3>
+                            Project Two
+                        </h3>
+
+                        <p>
+                            Project description placeholder.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="placeholder">
+                            Project image
+                        </div>
+
+                        <h3>
+                            Project Three
+                        </h3>
+
+                        <p>
+                            Project description placeholder.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+
+            <!-- Contact -->
+            <section
+                id="contact"
+                class="section"
+                aria-labelledby="contact-title"
+            >
+                <p class="placeholder-label">
+                    [ Contact ]
+                </p>
+
+                <h2 id="contact-title">
+                    Contact
+                </h2>
+
+                <div class="placeholder">
+                    Contact links / social links
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>
+                © 2026 Oukunaut
+            </p>
+
+            <div class="placeholder">
+                Footer / status / credits
+            </div>
+        </footer>
+
     </div>
 </body>
-
 </html>
